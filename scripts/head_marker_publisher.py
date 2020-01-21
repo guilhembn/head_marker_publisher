@@ -41,6 +41,10 @@ def publish_head_marker():
             if time >= rospy.Duration(3):
                 head_marker.action = Marker.DELETE
                 head_marker.header.frame_id = "map"
+            else:
+                head_marker.action = Marker.MODIFY
+                head_marker.header.frame_id = HUMAN_HEAD_FRAME
+
             head_marker.header.stamp = rospy.Time.now()
             pub.publish(head_marker)
         except Exception as e:

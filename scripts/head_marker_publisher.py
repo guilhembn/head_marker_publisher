@@ -23,13 +23,17 @@ def publish_head_marker():
     head_marker.type = Marker.MESH_RESOURCE
     head_marker.mesh_resource = "package://head_marker_publisher/res/head.dae"
     head_marker.id = 0
-    head_marker.scale.x = 0.1
-    head_marker.scale.y = 0.1
-    head_marker.scale.z = 0.1
+    head_marker.scale.x = 0.2
+    head_marker.scale.y = 0.2
+    head_marker.scale.z = 0.2
     head_marker.color.a = 1.0
     head_marker.color.r = 1.0
     head_marker.color.g = 1.0
     head_marker.color.b = 1.0
+    head_marker.pose.orientation.x = 0.5
+    head_marker.pose.orientation.y = -0.5
+    head_marker.pose.orientation.z = 0.5
+    head_marker.pose.orientation.w = 0.5
 
     while not rospy.is_shutdown():
         try:
